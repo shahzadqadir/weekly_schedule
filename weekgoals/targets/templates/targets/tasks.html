@@ -1,0 +1,16 @@
+{% extends 'targets/main.html' %}
+
+{% block title %} This week in focus {% endblock %}
+
+{% block content %}
+
+{% if tasks %}
+    {% for task in tasks %}
+        <h1>{{task.title}}</h1>
+        <p>{{task.description}}</p>
+    {% endfor %}
+{% else %}
+    No tasks assigned yet.
+{% endif %}
+
+{% endblock %}
